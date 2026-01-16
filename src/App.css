@@ -1,0 +1,129 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+/* App styles */
+
+:root{
+  --accent-pink: #fdeff4; /* pale pink */
+  --accent-darkgreen: #064e3b; /* dark green */
+  --muted: #6b7280;
+  --bg: #f7f8fb;
+  --card-bg: #fff;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  margin: 0;
+  color: var(--accent-darkgreen);
+  background: linear-gradient(180deg, var(--accent-pink), #fff 60%);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--accent-darkgreen);
+  padding: 0.6rem 1rem;
+  box-shadow: 0 2px 8px rgba(2, 6, 23, 0.12);
+}
+.nav-left { display:flex; align-items:center; gap:0.6rem }
+.brand-icon { font-size:1.4rem; display:inline-block }
+.nav-brand { font-weight:700; color: #fff; font-size:1.15rem }
+.nav-right { display:flex; align-items:center; gap:1rem }
+.nav-links { display:flex; gap:1rem; align-items:center }
+.nav-links a { color: rgba(255,255,255,0.95); text-decoration:none; padding:0.35rem 0.6rem; border-radius:8px; font-weight:600 }
+.nav-links a:hover { background: rgba(255,255,255,0.06) }
+.nav-actions { display:flex; align-items:center; gap:0.75rem }
+.cart-link { color:white; position:relative; text-decoration:none; display:inline-flex; align-items:center; gap:0.4rem }
+.cart-count { background: var(--accent-pink); color: var(--accent-darkgreen); font-weight:700; padding:0.12rem 0.45rem; border-radius:999px; font-size:0.78rem }
+.nav-login { background: var(--accent-pink); color: var(--accent-darkgreen); padding:0.35rem 0.6rem; border-radius:10px; text-decoration:none; font-weight:700 }
+.nav-login:hover { opacity:0.95 }
+.user-email { color: rgba(255,255,255,0.9); font-weight:600 }
+
+.container {
+  max-width: 980px;
+  margin: 1.25rem auto;
+  padding: 1rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.page-header { margin-bottom: 1rem; }
+.page-nav ul { list-style: none; padding: 0; margin: 0; display: flex; gap: 1rem; align-items: center; }
+.page-nav { margin-bottom: 1rem; }
+.page-nav a { text-decoration: none; color: #374151; padding: 0.4rem 0.6rem; border-radius: 6px; }
+.page-nav a:hover { background: rgba(37,99,235,0.06); color: #1f2937 }
+
+.container > h1 { margin-top: 0 }
+.container { padding-bottom: 2rem }
+.card { margin-bottom: 0.5rem }
+.card {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(2,6,23,0.06);
+}
+.card .big { font-size: 1.25rem; font-weight: 700; color: var(--accent-darkgreen) }
+
+.chip { display:inline-flex; gap:0.5rem; align-items:center; padding:0.4rem 0.6rem; border-radius:999px; color:#fff; font-weight:600; }
+.transactions-list { list-style:none; margin:0; padding:0 }
+.transactions-list li { display:flex; justify-content:space-between; padding:0.5rem 0; border-bottom:1px dashed rgba(6,78,59,0.04) }
+.transactions-list li strong { color:var(--accent-darkgreen) }
+
+.report-bar { height:12px; border-radius:999px; background:rgba(6,78,59,0.08); overflow:hidden }
+.report-bar > i { display:block; height:100%; }
+
+.list { padding-left: 1.25rem; }
+
+.login-page .login-form { max-width: 360px; margin: 0 auto; display:flex; flex-direction:column; gap:0.75rem }
+.login-form input { padding:0.5rem; border:1px solid #e5e7eb; border-radius:6px }
+.btn { padding:0.5rem 0.75rem; border-radius:6px; border: none; cursor:pointer }
+.btn.primary { background:#2563eb; color:white }
+
+@media (max-width:640px) {
+  .nav-links { display: none }
+}
+
+.read-the-docs {
+  color: #888;
+}
