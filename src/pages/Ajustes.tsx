@@ -1,7 +1,7 @@
 import { useSettings } from '../contexts/SettingsContext';
 
 export default function Ajustes() {
-  const { theme, setTheme, locale, setLocale, currency, setCurrency } = useSettings();
+  const { theme, setTheme, currency, setCurrency } = useSettings();
 
   return (
     <main className="container">
@@ -16,21 +16,6 @@ export default function Ajustes() {
             </label>
             <label style={{ display: 'flex', gap: 8, alignItems: 'center', cursor: 'pointer' }}>
               <input type="radio" name="theme" checked={theme === 'dark'} onChange={() => setTheme('dark')} /> 🌙 Escuro
-            </label>
-          </div>
-        </div>
-
-        <div className="card">
-          <h3>Idioma</h3>
-          <div style={{ display: 'flex', gap: 12, alignItems: 'center' }}>
-            <label style={{ display: 'flex', gap: 8, alignItems: 'center', cursor: 'pointer' }}>
-              <input type="radio" name="locale" checked={locale === 'pt-PT'} onChange={() => setLocale('pt-PT')} /> 🇵🇹 Português
-            </label>
-            <label style={{ display: 'flex', gap: 8, alignItems: 'center', cursor: 'pointer' }}>
-              <input type="radio" name="locale" checked={locale === 'es-ES'} onChange={() => setLocale('es-ES')} /> 🇪🇸 Español
-            </label>
-            <label style={{ display: 'flex', gap: 8, alignItems: 'center', cursor: 'pointer' }}>
-              <input type="radio" name="locale" checked={locale === 'en-US'} onChange={() => setLocale('en-US')} /> 🇺🇸 English
             </label>
           </div>
         </div>

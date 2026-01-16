@@ -21,7 +21,7 @@ export default function App() {
         transition: "margin-left 0.2s",
         padding: "2rem",
         width: "100%",
-        background: theme === 'dark' ? '#121212' : "#f5f6fa",
+        background: theme === 'dark' ? '#121212' : "#fff1f2",
         color: theme === 'dark' ? '#e0e0e0' : 'inherit'
       }}>
         <Routes>

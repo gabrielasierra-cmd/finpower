@@ -13,6 +13,10 @@ export default function Postcards() {
   ]);
   const [chatInput, setChatInput] = useState('');
 
+  function handleClearChat() {
+    setChatMessages([{ id: Date.now(), text: 'Olá, tens alguma dúvida financeira?', sender: 'bot' }]);
+  }
+
   function handleChatSend(e: React.FormEvent) {
     e.preventDefault();
     if (!chatInput.trim()) return;
@@ -166,10 +170,11 @@ export default function Postcards() {
           </div>
 
           <div style={{ background: '#fff', borderRadius: 16, boxShadow: '0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025)', border: '1px solid #f3f4f6', overflow: 'hidden', display: 'flex', flexDirection: 'column', height: 450 }}>
-            <div style={{ padding: '16px 20px', borderBottom: '1px solid #f3f4f6', background: '#fafafa' }}>
+            <div style={{ padding: '16px 20px', borderBottom: '1px solid #f3f4f6', background: '#fafafa', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
               <h3 style={{ margin: 0, fontSize: '1rem', display: 'flex', alignItems: 'center', gap: 8, color: '#111827' }}>
                 <span style={{ fontSize: '1.2rem' }}>🤖</span> Assistente IA
               </h3>
+              <button onClick={handleClearChat} className="btn small" style={{ fontSize: '0.75rem', padding: '4px 8px', height: 'auto' }}>Limpar</button>
             </div>
             
             <div style={{ flex: 1, overflowY: 'auto', padding: 20, display: 'flex', flexDirection: 'column', gap: 12, background: '#fff' }}>
